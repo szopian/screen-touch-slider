@@ -40,6 +40,7 @@ body {
 .slide img {
   max-width: 40%;
   max-height: 30%;
+  transition: transform 0.3 ease-in-out;
 }
 
 .slide h2 {
