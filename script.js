@@ -37,20 +37,36 @@ function touchStart(index) {
     currentIndex = index;
     startPos = getPositionX(event);
     isDragging = true;
+
+    // http://css-tricks.com/useing-rrequestanimationframe/
+    animationID = requestAnimationFrame(animation);
+    slider.classList.add("grabbing");
   };
 }
 
 function touchEnd() {
   isDragging = false;
-  //console.log("end");
+  cancelAnimationFrame(animationID);
+
+  slider.classList.remove("grabbing");
 }
 
 function touchMove() {
   if (isDragging) {
-    console.log("move");
+    const currentPosition = getPositionX(event);
+    currentTranslate = prevTranslate + currentPosition - startPos;
   }
 }
 
 function getPositionX(event) {
   return event.type.includes("mouse") ? event.pageX : touches[0].clientX;
+}
+
+function animation() {
+  setSliderPosition();
+  if (isDragging) requestAnimationFrame(animation);
+}
+
+function setSliderPosition() {
+  slider.style.transform = `translateX(${currentTranslate}px)`;
 }
