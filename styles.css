@@ -43,10 +43,11 @@ body {
 }
 
 .slide img {
-  max-width: 100%;
-  max-height: 60%;
+  max-width: 80%;
+  max-height: 45%;
   transition: transform 0.3s ease-in-out;
   box-shadow: 5px 5px 50px -1px var(--shadow);
+  margin: 50px;
 }
 
 .slide h2 {
@@ -72,6 +73,10 @@ body {
 .grabbing .slide img {
   transform: scale(0.9);
   box-shadow: 5px 5px 25px -1px var(--shadow);
+}
+
+p {
+  padding: 80px 100px;
 }
 
 @media (min-width: 1200px) {
