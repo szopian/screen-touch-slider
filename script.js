@@ -25,6 +25,7 @@ slides.forEach((slide, index) => {
   slide.addEventListener("mousemove", touchMove);
 });
 
+// Disable context menu
 window.oncontextmenu = function (event) {
   event.preventDefault();
   event.stopPropagation();
@@ -33,18 +34,23 @@ window.oncontextmenu = function (event) {
 
 function touchStart(index) {
   return function (event) {
-    console.log("start");
+    currentIndex = index;
+    startPos = getPositionX(event);
     isDragging = true;
   };
 }
 
 function touchEnd() {
   isDragging = false;
-  console.log("end");
+  //console.log("end");
 }
 
 function touchMove() {
   if (isDragging) {
     console.log("move");
   }
+}
+
+function getPositionX(event) {
+  return event.type.includes("mouse") ? event.pageX : touches[0].clientX;
 }
