@@ -1,5 +1,5 @@
 const slider = document.querySelector(".slider-container"),
-  slides = Array.form(document.querySelectorAll(".slide"));
+  slides = Array.from(document.querySelectorAll(".slide"));
 
 let isDragging = false,
   startPos = 0,
@@ -25,16 +25,26 @@ slides.forEach((slide, index) => {
   slide.addEventListener("mousemove", touchMove);
 });
 
+window.oncontextmenu = function (event) {
+  event.preventDefault();
+  event.stopPropagation();
+  return false;
+};
+
 function touchStart(index) {
   return function (event) {
     console.log("start");
+    isDragging = true;
   };
 }
 
 function touchEnd() {
+  isDragging = false;
   console.log("end");
 }
 
 function touchMove() {
-  console.log("move");
+  if (isDragging) {
+    console.log("move");
+  }
 }
