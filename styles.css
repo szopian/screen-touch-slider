@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Gaegu:wght@300&display=swap");
 :root {
-  --shadow: #fff;
+  --shadow: rgb(136, 125, 125);
 }
 * {
   box-sizing: border-box;
@@ -24,8 +24,7 @@ body {
   display: inline-flex;
   overflow: hidden;
   transform: translateX(0);
-  will-change: transform;
-  transition: transform 0.5 ease-out;
+  transition: transform 0.3s ease-out;
   cursor: grab;
 }
 
@@ -69,7 +68,7 @@ body {
 
 .grabbing .slide img {
   transform: scale(0.9);
-  box-shadow: 5px 5px 40px -1px var(--shadow);
+  box-shadow: 5px 5px 25px -1px var(--shadow);
 }
 
 @media (min-width: 1200px) {
