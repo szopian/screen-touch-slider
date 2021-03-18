@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Gaegu:wght@300&display=swap");
 :root {
   --shadow: rgb(136, 125, 125);
+  --font-color: #fff;
+  --btn-bg-color: #444;
+  --bg-color: #000;
 }
 * {
   box-sizing: border-box;
@@ -14,8 +17,8 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  color: white;
-  background-color: black;
+  color: var(--font-color);
+  background-color: var(--bg-color);
   line-height: 1.7;
 }
 
@@ -56,8 +59,8 @@ body {
 }
 
 .btn {
-  background-color: #444;
-  color: white;
+  background-color: var(--btn-bg-color);
+  color: var(--font-color);
   text-decoration: none;
   padding: 1rem 1.5rem;
 }
