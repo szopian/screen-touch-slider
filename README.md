@@ -1,4 +1,4 @@
-# Screen Touch Slider
+# screen-touch-slider
 ## Full Screen Touch Slider with HTML, CSS & JavaScript
 <img src="images/i1.png">
 <img src="images/i2.png">
