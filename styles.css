@@ -75,10 +75,13 @@ body {
   padding: 1rem 1.5rem;
   box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 288);
   border-radius: 5px;
+  opacity: 1;
 }
 
 .btn:hover {
   transform: scale(0.95);
+  box-shadow: -2px -2px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 288);
+  opacity: 0.3;
 }
 
 .grabbing {
