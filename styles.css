@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Gaegu:wght@300&display=swap");
 :root {
-  --shadow: rgb(95, 80, 80);
-  --font-color: #fff;
-  --btn-bg-color: #444;
-  --bg-color: rgb(138, 131, 131);
+  --shadow: #e0e0e0;
+  --font-color: #fafafa;
+  --btn-bg-color: #eeeeee;
+  --bg-color: #e0e0e0;
+  --text-shadow: #616161;
 }
 * {
   box-sizing: border-box;
@@ -20,6 +21,7 @@ body {
   color: var(--font-color);
   background-color: var(--bg-color);
   line-height: 1.7;
+  text-shadow: 2px 2px 4px var(--text-shadow);
 }
 
 .slider-container {
